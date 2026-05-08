@@ -1,5 +1,11 @@
 # @solana-config/eslint
 
+## 0.2.2
+
+### Patch Changes
+
+- [`4084d83`](https://github.com/solana-foundation/js-configs/commit/4084d8395569d4e39e0b9002806a096f549ad48a) Thanks [@lorisleiva](https://github.com/lorisleiva)! - Pin `typescript-eslint` to `^8.0.0 <8.59.0` to avoid a `no-unnecessary-type-assertion` regression introduced in `@typescript-eslint/eslint-plugin@8.59.0` by [PR #11789](https://github.com/typescript-eslint/typescript-eslint/pull/11789), which rewrites the rule to flag any assertion where the source is assignable to the target. Multiple confirmed false-positive regressions remain open on the upstream tracker: [#12277](https://github.com/typescript-eslint/typescript-eslint/issues/12277) (discriminated unions), [#12276](https://github.com/typescript-eslint/typescript-eslint/issues/12276) (template literals), [#12271](https://github.com/typescript-eslint/typescript-eslint/issues/12271) (enums), [#12270](https://github.com/typescript-eslint/typescript-eslint/issues/12270) (nested optional properties), and [#12268](https://github.com/typescript-eslint/typescript-eslint/issues/12268) (array type inference). Because the rule is enabled with `error` severity by `recommendedTypeChecked` (which this config extends) and is auto-fixable, consumers running `eslint --fix` against `@solana-config/eslint@0.2.1` with `typescript-eslint@8.59.x` would see load-bearing assertions silently stripped, breaking compilation in cases where the cast is what teaches TypeScript a function's return type. The pin can be relaxed once upstream lands fixes for the open issues, likely in a future 8.59.x patch or 8.60.x minor.
+
 ## 0.2.1
 
 ### Patch Changes
