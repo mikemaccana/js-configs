@@ -1,0 +1,58 @@
+{
+    "name": "@solana-config/oxc",
+    "version": "0.0.0",
+    "description": "Shared Oxlint and Oxfmt configurations for Solana projects",
+    "license": "MIT",
+    "author": "Solana Maintainers <maintainers@solana.com>",
+    "homepage": "https://github.com/solana-foundation/js-configs/tree/main/packages/oxc#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/solana-foundation/js-configs.git",
+        "directory": "packages/oxc"
+    },
+    "bugs": {
+        "url": "https://github.com/solana-foundation/js-configs/issues"
+    },
+    "keywords": [
+        "config",
+        "oxc",
+        "oxfmt",
+        "oxlint",
+        "solana"
+    ],
+    "files": [
+        "oxfmt.d.ts",
+        "oxfmt.js",
+        "oxfmt.json",
+        "oxlint.d.ts",
+        "oxlint.js",
+        "oxlint.json"
+    ],
+    "exports": {
+        "./oxfmt": {
+            "types": "./oxfmt.d.ts",
+            "default": "./oxfmt.js"
+        },
+        "./oxfmt.json": "./oxfmt.json",
+        "./oxlint": {
+            "types": "./oxlint.d.ts",
+            "default": "./oxlint.js"
+        },
+        "./oxlint.json": "./oxlint.json"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "peerDependencies": {
+        "oxfmt": ">=0.48.0",
+        "oxlint": ">=1.63.0"
+    },
+    "peerDependenciesMeta": {
+        "oxfmt": {
+            "optional": true
+        },
+        "oxlint": {
+            "optional": true
+        }
+    }
+}

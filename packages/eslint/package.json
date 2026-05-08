@@ -1,0 +1,49 @@
+{
+  "name": "@solana-config/eslint",
+  "version": "0.0.0",
+  "description": "ESLint rules to be shared across all Solana projects",
+  "main": "index.mjs",
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs",
+    "./jest": "./jest.mjs",
+    "./react": "./react.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "solana",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Solana Maintainers <maintainers@solana.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solana-foundation/js-configs.git",
+    "directory": "packages/eslint"
+  },
+  "bugs": {
+    "url": "https://github.com/solana-foundation/js-configs/issues"
+  },
+  "homepage": "https://github.com/solana-foundation/js-configs/tree/main/packages/eslint#readme",
+  "peerDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/eslint": "^9.6.1",
+    "@types/eslint__js": "^9.14.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-jest": "^29.2.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-typescript-sort-keys": "^3.3.0",
+    "globals": "^16.5.0",
+    "jest": "^30.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.49.0"
+  }
+}

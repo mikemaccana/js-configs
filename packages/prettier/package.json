@@ -1,0 +1,32 @@
+{
+  "name": "@solana-config/prettier",
+  "version": "0.0.0",
+  "description": "Prettier rules to be shared across all Solana projects",
+  "keywords": [
+    "config",
+    "javascript",
+    "prettier",
+    "prettierconfig",
+    "solana",
+    "styleguide"
+  ],
+  "homepage": "https://github.com/solana-foundation/js-configs/tree/main/packages/prettier#readme",
+  "bugs": {
+    "url": "https://github.com/solana-foundation/js-configs/issues"
+  },
+  "license": "MIT",
+  "author": "Solana Maintainers <maintainers@solana.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solana-foundation/js-configs.git",
+    "directory": "packages/prettier"
+  },
+  "type": "module",
+  "main": "./index.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": "^3.7.4"
+  }
+}
