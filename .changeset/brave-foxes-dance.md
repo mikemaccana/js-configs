@@ -1,5 +1,0 @@
----
-"@solana-config/eslint": patch
----
-
-Fix ESLint 10 incompatibility by replacing abandoned sorting plugins with `eslint-plugin-perfectionist`. `eslint-plugin-typescript-sort-keys@3.3.0` calls `context.getSourceCode()`, which was deprecated in ESLint 9 and removed in ESLint 10, leaving the freshly-released 0.2.0 unable to load under its declared ESLint peer; upstream issue #77 has been open since April 2024 with no fix shipped and no publish in over a year. This release drops the `eslint-plugin-typescript-sort-keys`, `eslint-plugin-sort-keys-fix`, and `eslint-plugin-simple-import-sort` peers in favor of a single `eslint-plugin-perfectionist >=4.0.0` peer that is actively maintained and ESLint 10 compatible. The deprecated `@typescript-eslint/sort-type-constituents` rule is also removed in favor of `perfectionist/sort-union-types`. Although the peer-dependency surface changes, this ships as a patch because 0.2.0 is non-functional under ESLint 10 and consumers cannot use the package without the swap.
