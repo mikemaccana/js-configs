@@ -1,6 +1,6 @@
 {
     "name": "@solana-config/oxc",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Shared Oxlint and Oxfmt configurations for Solana projects",
     "license": "MIT",
     "author": "Solana Maintainers <maintainers@solana.com>",
