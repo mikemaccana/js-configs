@@ -1,6 +1,5 @@
 import eslint from "@eslint/js";
-import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
-import typescriptSortKeysPlugin from "eslint-plugin-typescript-sort-keys";
+import perfectionistPlugin from "eslint-plugin-perfectionist";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -29,8 +28,7 @@ export default defineConfig(
   addTypeScriptLanguageOptions({
     files: ["**/*.ts"],
     plugins: {
-      "simple-import-sort": simpleImportSortPlugin,
-      "typescript-sort-keys": typescriptSortKeysPlugin,
+      perfectionist: perfectionistPlugin,
     },
     rules: {
       "@typescript-eslint/no-floating-promises": "error",
@@ -40,11 +38,18 @@ export default defineConfig(
       // See https://stackoverflow.com/questions/43353087/are-there-performance-concerns-with-return-await/70979225#70979225
       "@typescript-eslint/return-await": ["error", "always"],
       "@typescript-eslint/require-await": "error",
-      "@typescript-eslint/sort-type-constituents": "error",
       "no-return-await": "off",
-      "simple-import-sort/imports": "error",
-      "sort-keys-fix/sort-keys-fix": "error",
-      "typescript-sort-keys/interface": "error",
+      "perfectionist/sort-imports": "error",
+      "perfectionist/sort-interfaces": "error",
+      "perfectionist/sort-object-types": "error",
+      "perfectionist/sort-union-types": "error",
+    },
+    settings: {
+      perfectionist: {
+        ignoreCase: true,
+        order: "asc",
+        type: "alphabetical",
+      },
     },
   })
 );

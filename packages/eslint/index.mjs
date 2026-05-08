@@ -1,4 +1,4 @@
-import sortKeysFixPlugin from "eslint-plugin-sort-keys-fix";
+import perfectionistPlugin from "eslint-plugin-perfectionist";
 
 import base from "./base.mjs";
 
@@ -6,7 +6,7 @@ export default [
   ...base,
   {
     plugins: {
-      "sort-keys-fix": sortKeysFixPlugin,
+      perfectionist: perfectionistPlugin,
     },
     rules: {
       "@typescript-eslint/no-unused-vars": [
@@ -17,6 +17,7 @@ export default [
         },
       ],
       "no-unused-vars": "off",
+      "perfectionist/sort-objects": "error",
     },
   },
 ];
