@@ -9,7 +9,7 @@
         "@changesets/cli": "^2.31.0"
     },
     "engines": {
-        "node": ">=22.0"
+        "node": "^22.13 || >=24"
     },
     "packageManager": "pnpm@10.15.1"
 }
