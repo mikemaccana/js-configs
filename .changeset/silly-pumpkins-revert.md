@@ -1,0 +1,5 @@
+---
+"@solana-config/eslint": patch
+---
+
+Revert the ESLint 10 bump and the `eslint-plugin-perfectionist` swap from 0.2.x. The rule set and plugin choices are restored to what 0.1.x shipped — `eslint-plugin-simple-import-sort`, `eslint-plugin-sort-keys-fix`, `eslint-plugin-typescript-sort-keys`, and the `@typescript-eslint/sort-type-constituents` rule are back, and the ESLint and `@eslint/js` peers move back to `^9.39.1`. The 0.2.0 peer-dependency cleanup is preserved: `@types/eslint`, `@types/eslint__js`, and `jest` peers remain dropped, and the loose `>=` floors on the single-rule plugins and on `globals`, `typescript`, `typescript-eslint`, `eslint-plugin-jest`, and `eslint-plugin-react-hooks` are kept. The `typescript-eslint <8.59.0` pin from 0.2.2 is preserved as well to keep the `no-unnecessary-type-assertion` regression at bay. Net effect: consumers on 0.2.x who were seeing import-sort, key-sort, and union-type churn from perfectionist will see those diffs revert; rule behaviors return to what they were before 0.2.0.
