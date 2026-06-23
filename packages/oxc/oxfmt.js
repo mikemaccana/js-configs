@@ -2,7 +2,7 @@
  * Shared Oxfmt configuration for Solana Kit projects.
  *
  * Ports {@link https://npmjs.com/package/@solana/prettier-config-solana | @solana/prettier-config-solana}
- * to Oxfmt with the Solana code style: 4-space indent, 120-char print width,
+ * to Oxfmt with the Solana code style: 2-space indent, 120-char print width,
  * single quotes, semicolons, arrow parentheses avoided where possible.
  *
  * Adds {@link https://oxc.rs/docs/guide/usage/formatter/sorting | `sortImports`}
@@ -44,6 +44,6 @@ module.exports = {
     semi: true,
     singleQuote: true,
     sortImports: true,
-    tabWidth: 4,
+    tabWidth: 2,
     useTabs: false,
 };
