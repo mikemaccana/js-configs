@@ -44,6 +44,6 @@ module.exports = {
     semi: true,
     singleQuote: true,
     sortImports: true,
-    tabWidth: 4,
+    tabWidth: 2,
     useTabs: false,
 };
